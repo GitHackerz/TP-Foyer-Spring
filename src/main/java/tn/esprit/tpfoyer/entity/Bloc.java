@@ -3,22 +3,25 @@ package tn.esprit.tpfoyer.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 import java.util.List;
 
 @Entity
 @Getter
 @Setter
-@RequiredArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class Bloc {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idBloc;
+    Long idBloc;
 
-    private String nomBloc;
+    String nomBloc;
 
-    private Long capaciteBloc;
+    Long capaciteBloc;
 
     @ManyToOne
     @JoinColumn

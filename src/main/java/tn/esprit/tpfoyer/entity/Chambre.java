@@ -2,6 +2,7 @@ package tn.esprit.tpfoyer.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.FieldDefaults;
 import tn.esprit.tpfoyer.Enums.TypeChambre;
 
 import java.util.List;
@@ -9,7 +10,9 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
-@RequiredArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class Chambre {
 
     @Id
