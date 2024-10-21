@@ -1,6 +1,6 @@
-package tn.esprit.tpfoyer.Controllers;
+package tn.esprit.tpfoyer.controller;
 
-import tn.esprit.tpfoyer.Entities.Reservation;
+import tn.esprit.tpfoyer.entity.Reservation;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.tpfoyer.service.reservation.IReservationService;

@@ -1,8 +1,8 @@
-package tn.esprit.tpfoyer.Controllers;
+package tn.esprit.tpfoyer.controller;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import tn.esprit.tpfoyer.Entities.Bloc;
+import tn.esprit.tpfoyer.entity.Bloc;
 import tn.esprit.tpfoyer.service.bloc.IBlocService;
 
 import java.util.List;

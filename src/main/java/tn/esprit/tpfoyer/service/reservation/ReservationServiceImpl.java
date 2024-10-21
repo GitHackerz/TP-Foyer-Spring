@@ -2,9 +2,8 @@ package tn.esprit.tpfoyer.service.reservation;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import tn.esprit.tpfoyer.Entities.Reservation;
-import tn.esprit.tpfoyer.Repositories.ReservationRepository;
-import tn.esprit.tpfoyer.service.IBaseService;
+import tn.esprit.tpfoyer.entity.Reservation;
+import tn.esprit.tpfoyer.repository.ReservationRepository;
 
 import java.util.List;
 import java.util.Optional;

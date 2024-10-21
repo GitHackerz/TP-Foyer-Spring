@@ -1,7 +1,7 @@
-package tn.esprit.tpfoyer.Controllers;
+package tn.esprit.tpfoyer.controller;
 
 
-import tn.esprit.tpfoyer.Entities.Etudiant;
+import tn.esprit.tpfoyer.entity.Etudiant;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.tpfoyer.service.etudiant.IEtudiantService;

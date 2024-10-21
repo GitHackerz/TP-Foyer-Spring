@@ -2,9 +2,8 @@ package tn.esprit.tpfoyer.service.chambre;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import tn.esprit.tpfoyer.Entities.Chambre;
-import tn.esprit.tpfoyer.Repositories.ChambreRepository;
-import tn.esprit.tpfoyer.service.IBaseService;
+import tn.esprit.tpfoyer.entity.Chambre;
+import tn.esprit.tpfoyer.repository.ChambreRepository;
 
 import java.util.List;
 import java.util.Optional;

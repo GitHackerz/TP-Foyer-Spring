@@ -1,10 +1,9 @@
 package tn.esprit.tpfoyer.service.foyer;
 
-import tn.esprit.tpfoyer.Entities.Foyer;
-import tn.esprit.tpfoyer.Repositories.FoyerRepository;
+import tn.esprit.tpfoyer.entity.Foyer;
+import tn.esprit.tpfoyer.repository.FoyerRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import tn.esprit.tpfoyer.service.IBaseService;
 
 import java.util.List;
 import java.util.Optional;

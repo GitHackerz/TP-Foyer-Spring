@@ -1,8 +1,8 @@
-package tn.esprit.tpfoyer.Controllers;
+package tn.esprit.tpfoyer.controller;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import tn.esprit.tpfoyer.Entities.Universite;
+import tn.esprit.tpfoyer.entity.Universite;
 import tn.esprit.tpfoyer.service.universite.IUniversiteService;
 
 import java.util.List;

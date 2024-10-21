@@ -1,6 +1,6 @@
-package tn.esprit.tpfoyer.Controllers;
+package tn.esprit.tpfoyer.controller;
 
-import tn.esprit.tpfoyer.Entities.Foyer;
+import tn.esprit.tpfoyer.entity.Foyer;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.tpfoyer.service.foyer.IFoyerService;

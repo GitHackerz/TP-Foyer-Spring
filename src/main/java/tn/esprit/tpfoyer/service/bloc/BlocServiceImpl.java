@@ -2,9 +2,8 @@ package tn.esprit.tpfoyer.service.bloc;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import tn.esprit.tpfoyer.Entities.Bloc;
-import tn.esprit.tpfoyer.Repositories.BlocRepository;
-import tn.esprit.tpfoyer.service.IBaseService;
+import tn.esprit.tpfoyer.entity.Bloc;
+import tn.esprit.tpfoyer.repository.BlocRepository;
 
 import java.util.List;
 import java.util.Optional;
