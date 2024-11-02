@@ -1,4 +1,4 @@
-package tn.esprit.tpfoyer.Enums;
+package tn.esprit.tpfoyer.enums;
 
 public enum TypeChambre {
     SIMPLE,

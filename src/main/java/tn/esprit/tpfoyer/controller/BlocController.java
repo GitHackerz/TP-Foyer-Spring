@@ -1,7 +1,9 @@
 package tn.esprit.tpfoyer.controller;
 
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 import tn.esprit.tpfoyer.entity.Bloc;
 import tn.esprit.tpfoyer.service.bloc.IBlocService;
 
@@ -20,7 +22,8 @@ public class BlocController {
 
     @GetMapping("{id}")
     public Bloc findById(@PathVariable Long id) {
-        return blocService.findById(id).orElseThrow();
+        return blocService.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Entity not found"));
+
     }
 
     @PostMapping

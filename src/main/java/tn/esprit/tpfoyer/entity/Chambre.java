@@ -3,7 +3,7 @@ package tn.esprit.tpfoyer.entity;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-import tn.esprit.tpfoyer.Enums.TypeChambre;
+import tn.esprit.tpfoyer.enums.TypeChambre;
 
 import java.util.List;
 
