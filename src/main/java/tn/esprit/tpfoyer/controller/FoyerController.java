@@ -42,4 +42,24 @@ public class FoyerController {
     public void delete(@PathVariable Long id) {
         foyerService.deleteById(id);
     }
+
+    @GetMapping("/byBlocId")
+    public List<Foyer> findByBlocsId(@RequestParam Long blocId) {
+        return foyerService.findByBlocsId(blocId);
+    }
+
+    @GetMapping("/byIdAndBlocId")
+    public Foyer findByIdFoyerAndBlocsIdBloc(@RequestParam Long idFoyer, @RequestParam Long blocId) {
+        return foyerService.findByIdFoyerAndBlocsIdBloc(idFoyer, blocId);
+    }
+
+    @GetMapping("/byBlocCapacite")
+    public List<Foyer> findByBlocsCapaciteBloc(@RequestParam Long capaciteBloc) {
+        return foyerService.findByBlocsCapaciteBloc(capaciteBloc);
+    }
+
+    @GetMapping("/byBlocIdAndUniversiteId")
+    public Foyer findByBlocsIdBlocAndUniversiteIdUniversite(@RequestParam Long blocId, @RequestParam Long universiteId) {
+        return foyerService.findByBlocsIdBlocAndUniversiteIdUniversite(blocId, universiteId);
+    }
 }

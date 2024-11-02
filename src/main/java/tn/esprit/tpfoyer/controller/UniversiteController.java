@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.*;
 import tn.esprit.tpfoyer.entity.Universite;
 import tn.esprit.tpfoyer.service.universite.IUniversiteService;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -42,4 +43,13 @@ public class UniversiteController {
     public void delete(@PathVariable Long id) {
         universiteService.deleteById(id);
     }
+
+    @GetMapping("/search")
+    public List<Universite> searchUniversites(
+            @RequestParam String nameSubstring,
+            @RequestParam LocalDate startDate,
+            @RequestParam LocalDate endDate) {
+        return universiteService.findDistinctByFoyerBlocsChambresReservationsEtudiantListNomEtudiantContainingAndFoyerBlocsChambresReservationsEtudiantListDateNaissanceBetween(nameSubstring, startDate, endDate);
+    }
+
 }

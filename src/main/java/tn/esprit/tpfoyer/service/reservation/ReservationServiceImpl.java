@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import tn.esprit.tpfoyer.entity.Reservation;
 import tn.esprit.tpfoyer.repository.ReservationRepository;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -45,4 +46,17 @@ public class ReservationServiceImpl implements IReservationService {
     public void deleteAll() {
         reservationRepository.deleteAll();
     }
+
+    public List<Reservation> findByEstValide(Boolean estValide) {
+        return reservationRepository.findByEstValide(estValide);
+    }
+
+    public List<Reservation> findByEtudiantListId(Long etudiantId) {
+        return reservationRepository.findByEtudiantListId(etudiantId);
+    }
+
+    public List<Reservation> findByAnneUniversitaireAndEstValide(LocalDate anneUniversitaire, Boolean estValide) {
+        return reservationRepository.findByAnneUniversitaireAndEstValide(anneUniversitaire, estValide);
+    }
+
 }

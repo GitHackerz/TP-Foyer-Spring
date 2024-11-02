@@ -46,4 +46,55 @@ public class BlocController {
         blocService.deleteById(id);
     }
 
+    @GetMapping("/byNom")
+    public List<Bloc> findByNomBloc(@RequestParam String nomBloc) {
+        return blocService.findByNomBloc(nomBloc);
+    }
+
+    @GetMapping("/byCapacite")
+    public List<Bloc> findByCapaciteBloc(@RequestParam Long capaciteBloc) {
+        return blocService.findByCapaciteBloc(capaciteBloc);
+    }
+
+    @GetMapping("/byNomAndCapacite")
+    public List<Bloc> findByNomBlocAndCapaciteBloc(@RequestParam String nomBloc, @RequestParam Long capaciteBloc) {
+        return blocService.findByNomBlocAndCapaciteBloc(nomBloc, capaciteBloc);
+    }
+
+    @GetMapping("/byNomIgnoreCase")
+    public List<Bloc> findByNomBlocIgnoreCase(@RequestParam String nomBloc) {
+        return blocService.findByNomBlocIgnoreCase(nomBloc);
+    }
+
+    @GetMapping("/byCapaciteGreaterThan")
+    public List<Bloc> findByCapaciteBlocGreaterThan(@RequestParam Long minCap) {
+        return blocService.findByCapaciteBlocGreaterThan(minCap);
+    }
+
+    @GetMapping("/byNomContains")
+    public List<Bloc> findByNomBlocContains(@RequestParam String nom) {
+        return blocService.findByNomBlocContains(nom);
+    }
+
+    @GetMapping("/orderedByNom")
+    public List<Bloc> findByOrderByNomBlocAsc(String nom) {
+        return blocService.findByOrderByNomBlocAsc(nom);
+    }
+
+    @GetMapping("/byNomOrCapacite")
+    public List<Bloc> findByNomBlocOrCapaciteBloc(@RequestParam String nom, @RequestParam Long capacite) {
+        return blocService.findByNomBlocOrCapaciteBloc(nom, capacite);
+    }
+
+    @GetMapping("/byFoyerId")
+    public List<Bloc> findByFoyerIdFoyer(@RequestParam Long idFoyer) {
+        return blocService.findByFoyerIdFoyer(idFoyer);
+    }
+
+    @GetMapping("/byUniversiteId")
+    public List<Bloc> findByFoyerUniversiteIdUniversite(@RequestParam Long universiteId) {
+        return blocService.findByFoyerUniversiteIdUniversite(universiteId);
+    }
+
+
 }

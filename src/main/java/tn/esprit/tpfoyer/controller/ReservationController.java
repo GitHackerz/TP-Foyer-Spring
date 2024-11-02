@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.tpfoyer.service.reservation.IReservationService;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -42,4 +43,22 @@ public class ReservationController {
     public void delete(@PathVariable Long id) {
         reservationService.deleteById(id);
     }
+
+    @GetMapping("/byValidationStatus")
+    public List<Reservation> findByEstValide(@RequestParam Boolean estValide) {
+        return reservationService.findByEstValide(estValide);
+    }
+
+    @GetMapping("/byEtudiantId")
+    public List<Reservation> findByEtudiantListId(@RequestParam Long etudiantId) {
+        return reservationService.findByEtudiantListId(etudiantId);
+    }
+
+    @GetMapping("/byAnneUniversitaireAndValidationStatus")
+    public List<Reservation> findByAnneUniversitaireAndEstValide(
+            @RequestParam LocalDate anneUniversitaire,
+            @RequestParam Boolean estValide) {
+        return reservationService.findByAnneUniversitaireAndEstValide(anneUniversitaire, estValide);
+    }
+
 }

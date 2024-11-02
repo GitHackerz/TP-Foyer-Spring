@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import tn.esprit.tpfoyer.entity.Universite;
 import tn.esprit.tpfoyer.repository.UniversiteRepository;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -45,5 +46,11 @@ public class UniversiteServiceImpl implements IUniversiteService{
     public void deleteAll() {
         universiteRepository.deleteAll();
     }
+
+    public List<Universite> findDistinctByFoyerBlocsChambresReservationsEtudiantListNomEtudiantContainingAndFoyerBlocsChambresReservationsEtudiantListDateNaissanceBetween(
+            String nameSubstring, LocalDate startDate, LocalDate endDate) {
+        return universiteRepository.findDistinctByFoyerBlocsChambresReservationsEtudiantListNomEtudiantContainingAndFoyerBlocsChambresReservationsEtudiantListDateNaissanceBetween(nameSubstring, startDate, endDate);
+    }
+
 }
 

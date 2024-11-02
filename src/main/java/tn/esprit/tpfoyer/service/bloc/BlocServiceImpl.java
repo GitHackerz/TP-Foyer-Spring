@@ -46,4 +46,45 @@ public class BlocServiceImpl implements IBlocService {
         blocRepository.deleteAll();
     }
 
+    public List<Bloc> findByNomBloc(String nomBloc) {
+        return blocRepository.findByNomBloc(nomBloc);
+    }
+
+    public List<Bloc> findByCapaciteBloc(Long capaciteBloc) {
+        return blocRepository.findByCapaciteBloc(capaciteBloc);
+    }
+
+    public List<Bloc> findByNomBlocAndCapaciteBloc(String nomBloc, Long capaciteBloc) {
+        return blocRepository.findByNomBlocAndCapaciteBloc(nomBloc, capaciteBloc);
+    }
+
+    public List<Bloc> findByNomBlocIgnoreCase(String nomBloc) {
+        return blocRepository.findByNomBlocIgnoreCase(nomBloc);
+    }
+
+    public List<Bloc> findByCapaciteBlocGreaterThan(Long minCap) {
+        return blocRepository.findByCapaciteBlocGreaterThan(minCap);
+    }
+
+    public List<Bloc> findByNomBlocContains(String nom) {
+        return blocRepository.findByNomBlocContains(nom);
+    }
+
+    public List<Bloc> findByOrderByNomBlocAsc(String nom) {
+        return blocRepository.findByOrderByNomBlocAsc(nom);
+    }
+
+    public List<Bloc> findByNomBlocOrCapaciteBloc(String nom, Long capacite) {
+        return blocRepository.findByNomBlocOrCapaciteBloc(nom, capacite);
+    }
+
+    public List<Bloc> findByFoyerIdFoyer(Long idFoyer) {
+        return blocRepository.findByFoyerIdFoyer(idFoyer);
+    }
+
+    public List<Bloc> findByFoyerUniversiteIdUniversite(Long universiteId) {
+        return blocRepository.findByFoyerUniversiteIdUniversite(universiteId);
+    }
+
+
 }
