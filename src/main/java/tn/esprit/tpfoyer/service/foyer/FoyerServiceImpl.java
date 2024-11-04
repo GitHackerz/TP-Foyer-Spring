@@ -48,7 +48,7 @@ public class FoyerServiceImpl implements IFoyerService {
     }
 
     public List<Foyer> findByBlocsId(Long blocId) {
-        return foyerRepository.findByBlocsId(blocId);
+        return foyerRepository.findByBlocsIdBloc(blocId);
     }
 
     public Foyer findByIdFoyerAndBlocsIdBloc(Long idFoyer, Long blocId) {

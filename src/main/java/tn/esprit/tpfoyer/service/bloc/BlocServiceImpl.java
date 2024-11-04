@@ -70,8 +70,8 @@ public class BlocServiceImpl implements IBlocService {
         return blocRepository.findByNomBlocContains(nom);
     }
 
-    public List<Bloc> findByOrderByNomBlocAsc(String nom) {
-        return blocRepository.findByOrderByNomBlocAsc(nom);
+    public List<Bloc> findByOrderByNomBlocAsc() {
+        return blocRepository.findByOrderByNomBlocAsc();
     }
 
     public List<Bloc> findByNomBlocOrCapaciteBloc(String nom, Long capacite) {

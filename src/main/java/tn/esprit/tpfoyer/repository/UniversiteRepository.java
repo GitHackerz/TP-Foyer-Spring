@@ -10,4 +10,5 @@ public interface UniversiteRepository extends JpaRepository<Universite, Long> {
     List<Universite> findDistinctByFoyerBlocsChambresReservationsEtudiantListNomEtudiantContainingAndFoyerBlocsChambresReservationsEtudiantListDateNaissanceBetween(
             String nameSubstring, LocalDate startDate, LocalDate endDate);
 
+
 }

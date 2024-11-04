@@ -77,8 +77,8 @@ public class BlocController {
     }
 
     @GetMapping("/orderedByNom")
-    public List<Bloc> findByOrderByNomBlocAsc(String nom) {
-        return blocService.findByOrderByNomBlocAsc(nom);
+    public List<Bloc> findByOrderByNomBlocAsc() {
+        return blocService.findByOrderByNomBlocAsc();
     }
 
     @GetMapping("/byNomOrCapacite")

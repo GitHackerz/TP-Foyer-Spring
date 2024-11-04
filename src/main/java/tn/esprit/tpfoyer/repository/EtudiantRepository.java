@@ -1,6 +1,8 @@
 package tn.esprit.tpfoyer.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
 import tn.esprit.tpfoyer.entity.Etudiant;
 
 import java.time.LocalDate;
@@ -20,4 +22,9 @@ public interface EtudiantRepository extends JpaRepository<Etudiant,Long> {
     List<Etudiant> findByReservationsAnneUniversitaire(LocalDate anneUniversitaire);
     List<Etudiant> findByEcoleAndDateNaissanceAfter(String ecole, LocalDate date);
     List<Etudiant> findByReservationsAnneUniversitaireOrderByDateNaissance(LocalDate anneUniversitaire);
+
+    @Modifying
+    @Query("DELETE FROM Etudiant e WHERE e.idEtudiant > ?1")
+    Etudiant removeEtudiantByIdEtudiantGreaterThan(Long minId);
+
 }

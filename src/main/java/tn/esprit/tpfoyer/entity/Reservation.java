@@ -24,4 +24,7 @@ public class Reservation {
 
     @ManyToMany
     List<Etudiant> etudiantList;
+
+    @ManyToMany
+    List<Chambre> chambreList;
 }

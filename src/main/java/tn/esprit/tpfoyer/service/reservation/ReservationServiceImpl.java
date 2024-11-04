@@ -52,7 +52,7 @@ public class ReservationServiceImpl implements IReservationService {
     }
 
     public List<Reservation> findByEtudiantListId(Long etudiantId) {
-        return reservationRepository.findByEtudiantListId(etudiantId);
+        return reservationRepository.findByEtudiantListIdEtudiant(etudiantId);
     }
 
     public List<Reservation> findByAnneUniversitaireAndEstValide(LocalDate anneUniversitaire, Boolean estValide) {

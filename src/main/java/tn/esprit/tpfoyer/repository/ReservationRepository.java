@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface ReservationRepository extends JpaRepository<Reservation,Long> {
     List<Reservation> findByEstValide(Boolean estValide);
-    List<Reservation> findByEtudiantListId(Long etudiantId);
+    List<Reservation> findByEtudiantListIdEtudiant(Long etudiantId);
     List<Reservation> findByAnneUniversitaireAndEstValide(LocalDate anneUniversitaire, Boolean estValide);
 
 }
