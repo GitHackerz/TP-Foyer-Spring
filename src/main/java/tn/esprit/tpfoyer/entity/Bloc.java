@@ -2,6 +2,8 @@ package tn.esprit.tpfoyer.entity;
 
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -17,6 +19,7 @@ import java.util.List;
 public class Bloc {
 
     @Id
+    @NotNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long idBloc;
 

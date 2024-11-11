@@ -1,6 +1,7 @@
 package tn.esprit.tpfoyer.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -21,5 +22,6 @@ public class Universite {
 
     @OneToOne
     @JoinColumn
+    @JsonIgnoreProperties
     Foyer foyer;
 }
